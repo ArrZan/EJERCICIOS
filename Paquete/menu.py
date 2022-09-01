@@ -13,7 +13,6 @@ class Menu:
         self.fil = fil
 
     def menu(self, opciones, titulo):
-
         cls()
         self.col = 1
         self.fil = 1
@@ -32,9 +31,8 @@ class Menu:
             elif ct == 24:
                 self.col = self.reajustar(ct)
 
-        #gotoxy(1, self.fil + 2)
-        #opc = input("Escoja una Opcion[1...{}]: ".format(len(opciones)))
         opc = self.__valid(1, self.fil + 2, "Escoja una Opcion[1...{}]: ".format(len(opciones)))
+        
         return opc
 
     def reajustar(self, ct):
